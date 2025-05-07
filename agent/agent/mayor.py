@@ -18,7 +18,7 @@ class Mayor:
     def __init__(self, uid: str) -> None:
         self.prompt = Prompt("mayor")
         self.uid = uid
-        self.caller = LLMCaller("gpt-4")
+        self.caller = LLMCaller("deepseek/deepseek-chat-v3-0324:free")
         self.mayor_prompt = ""
         self.mayor = dict()
         self.mayor_info = dict()
@@ -36,7 +36,7 @@ class Mayor:
         }
     
     def from_json(self, obj: Dict[str, Any]):
-        self.caller = LLMCaller(obj.get("caller", "gpt-4"))
+        self.caller = LLMCaller(obj.get("caller", "deepseek/deepseek-chat-v3-0324:free"))
         self.prompt = Prompt(obj.get("prompt", "mayor"))
         self.uid = obj["uid"]
         self.mayor_prompt = obj.get("mayor_prompt", "")

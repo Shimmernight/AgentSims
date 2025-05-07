@@ -11,7 +11,9 @@
     ],
     "models": [
         "gpt-4",
-        "gpt-3.5"
+        "gpt-3.5",
+        "openrouter/auto",
+        "deepseek/deepseek-chat-v3-0324:free"
     ],
     "memorySystems": [
         "LongShortTermMemories"
